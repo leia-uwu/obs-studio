@@ -868,7 +868,7 @@ static map<string, string> themeMigrations = {
 bool OBSApp::InitTheme()
 {
 	defaultPalette = palette();
-#if !defined(_WIN32) && !defined(__APPLE__)
+#if !defined(_WIN32) && !defined(__APPLE__) && FALSE
 	setStyle(new OBSProxyStyle("Fusion"));
 #else
 	setStyle(new OBSProxyStyle());
